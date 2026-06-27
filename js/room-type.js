@@ -70,7 +70,7 @@ function renderCapacityOptions() {
 
         <button class="btn-gold" style="margin-bottom:15px;" onclick="selectCapacity(${cap})">
 
-            غرف ${cap} أشخاص (${total})
+            غرف ${cap} أشخاص
 
         </button>
 
