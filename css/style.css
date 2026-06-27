@@ -1,0 +1,434 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Tajawal',sans-serif;
+    direction:rtl;
+    background:linear-gradient(160deg,#0B1F14 0%,#122B1D 60%,#0E1E10 100%);
+    min-height:100vh;
+    color:#EAE6D8;
+}
+
+a{
+    text-decoration:none;
+}
+
+.container{
+    width:95%;
+    max-width:450px;
+    margin:auto;
+    padding:30px 0;
+}
+
+.logo-box{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.logo-box img{
+    width:90px;
+    height:90px;
+    object-fit:contain;
+}
+
+.logo-box h3{
+    margin-top:10px;
+    color:#F5C842;
+    letter-spacing:2px;
+    font-size:14px;
+}
+
+.title{
+    text-align:center;
+    margin-bottom:35px;
+}
+
+.title h1{
+    font-size:32px;
+    margin-bottom:10px;
+    font-weight:800;
+}
+
+.title p{
+    color:#8BA898;
+    font-size:15px;
+}
+
+.buttons{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
+
+.main-btn{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:15px;
+
+    padding:20px;
+
+    border-radius:18px;
+
+    color:white;
+
+    font-size:20px;
+
+    font-weight:bold;
+
+    transition:.3s;
+
+    cursor:pointer;
+}
+
+.main-btn:hover{
+    transform:translateY(-4px);
+}
+
+.bus-btn{
+    background:linear-gradient(135deg,#2A7A4B,#1B5E35);
+    box-shadow:0 8px 20px rgba(42,122,75,.35);
+}
+
+.room-btn{
+    background:linear-gradient(135deg,#C8963E,#9B6E20);
+    box-shadow:0 8px 20px rgba(200,150,62,.35);
+}
+
+.admin-btn{
+    background:#222;
+    border:1px solid rgba(255,255,255,.08);
+}
+
+.admin-btn:hover{
+    background:#333;
+}
+
+.main-btn span{
+    flex:1;
+    text-align:center;
+}
+/* ===========================
+   Cards
+=========================== */
+
+.card{
+    background:rgba(26,56,40,.75);
+    backdrop-filter:blur(10px);
+
+    border:1px solid rgba(200,150,62,.15);
+
+    border-radius:18px;
+
+    padding:20px;
+
+    margin-bottom:15px;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.35);
+}
+
+.card-title{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    margin-bottom:15px;
+}
+
+.card-title h2{
+    font-size:20px;
+}
+
+.card-title span{
+    color:#8BA898;
+    font-size:14px;
+}
+
+
+/* ===========================
+   Badge
+=========================== */
+
+.badge{
+
+    padding:5px 14px;
+
+    border-radius:30px;
+
+    font-size:13px;
+
+    font-weight:bold;
+
+}
+
+.badge.green{
+
+    background:#1d5d38;
+
+    color:#79ffb2;
+
+}
+
+.badge.red{
+
+    background:#662727;
+
+    color:#ff9b9b;
+
+}
+
+
+/* ===========================
+   Progress
+=========================== */
+
+.progress{
+
+    width:100%;
+
+    height:8px;
+
+    background:#222;
+
+    border-radius:50px;
+
+    overflow:hidden;
+
+    margin-top:15px;
+
+}
+
+.progress div{
+
+    height:100%;
+
+    background:#3DA068;
+
+    width:0%;
+
+    transition:.4s;
+
+}
+
+
+/* ===========================
+   Form
+=========================== */
+
+label{
+
+    display:block;
+
+    margin-bottom:6px;
+
+    color:#8BA898;
+
+    font-size:14px;
+
+}
+
+input,
+textarea,
+select{
+
+    width:100%;
+
+    padding:14px;
+
+    margin-bottom:15px;
+
+    border:none;
+
+    outline:none;
+
+    border-radius:12px;
+
+    background:#13291d;
+
+    color:white;
+
+    font-size:15px;
+
+    border:1px solid rgba(255,255,255,.08);
+
+}
+
+textarea{
+
+    resize:vertical;
+
+    min-height:120px;
+
+}
+
+
+/* ===========================
+   Buttons
+=========================== */
+
+button{
+
+    width:100%;
+
+    border:none;
+
+    cursor:pointer;
+
+    border-radius:14px;
+
+    padding:15px;
+
+    font-size:16px;
+
+    font-weight:bold;
+
+    transition:.3s;
+
+}
+
+.btn-green{
+
+    background:#2A7A4B;
+
+    color:white;
+
+}
+
+.btn-green:hover{
+
+    background:#33945a;
+
+}
+
+.btn-gold{
+
+    background:#C8963E;
+
+    color:white;
+
+}
+
+.btn-gold:hover{
+
+    background:#dca84b;
+
+}
+
+.btn-red{
+
+    background:#d94343;
+
+    color:white;
+
+}
+
+.btn-red:hover{
+
+    background:#ff5555;
+
+}
+
+
+/* ===========================
+   Search
+=========================== */
+
+.search-box{
+
+    margin-bottom:20px;
+
+}
+
+.search-box input{
+
+    margin-bottom:0;
+
+}
+
+
+/* ===========================
+   Table
+=========================== */
+
+table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+}
+
+table tr{
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+
+}
+
+table td{
+
+    padding:12px;
+
+    font-size:14px;
+
+}
+
+
+/* ===========================
+   Toast
+=========================== */
+
+.toast{
+
+    position:fixed;
+
+    bottom:30px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    background:#2A7A4B;
+
+    color:white;
+
+    padding:15px 25px;
+
+    border-radius:12px;
+
+    display:none;
+
+    z-index:999;
+
+}
+
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media(max-width:600px){
+
+    .container{
+
+        width:92%;
+
+    }
+
+    .title h1{
+
+        font-size:26px;
+
+    }
+
+    .main-btn{
+
+        font-size:18px;
+
+        padding:18px;
+
+    }
+
+}

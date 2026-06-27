@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>لوحة التحكم</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap"
+      rel="stylesheet" />
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <!-- Header -->
+      <div class="logo-box">
+        <img src="assets/logo.png" alt="Conference Logo" />
+
+        <h3>مؤتمر صيف ٢٠٢٦</h3>
+      </div>
+      <div class="card">
+        <div class="card-title">
+          <h2>لوحة التحكم</h2>
+
+          <button style="width: auto" class="btn-red" onclick="logout()">
+            تسجيل خروج
+          </button>
+        </div>
+      </div>
+
+      <!-- Statistics -->
+
+      <div class="card">
+        <h3>📊 الإحصائيات</h3>
+
+        <br />
+
+        <table>
+          <tr>
+            <td>عدد الأوتوبيسات</td>
+
+            <td id="busCount">0</td>
+          </tr>
+
+          <tr>
+            <td>إجمالي ركاب الأوتوبيسات</td>
+
+            <td id="passengerCount">0</td>
+          </tr>
+
+          <tr>
+            <td>عدد الغرف</td>
+
+            <td id="roomCount">0</td>
+          </tr>
+
+          <tr>
+            <td>إجمالي أفراد الغرف</td>
+
+            <td id="roomMembers">0</td>
+          </tr>
+        </table>
+      </div>
+
+      <!-- Search -->
+
+      <div class="card">
+        <h3>🔍 البحث</h3>
+
+        <br />
+
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="ابحث بالاسم..."
+          onkeyup="searchPerson()" />
+
+        <div id="searchResult"></div>
+      </div>
+
+      <!-- Add Bus -->
+
+      <div class="card">
+        <h3>🚌 إضافة أوتوبيس</h3>
+
+        <br />
+
+        <label>اسم الأوتوبيس</label>
+        <input type="text" id="busNameInput" placeholder="مثال: أوتوبيس 1" />
+
+        <label>عدد المقاعد</label>
+        <input type="number" id="busCapacityInput" placeholder="مثال: 50" />
+
+        <button class="btn-green" onclick="addBus()">➕ إضافة الأوتوبيس</button>
+
+        <br /><br />
+
+        <div id="busListContainer"></div>
+      </div>
+
+      <!-- Add Room -->
+
+      <div class="card">
+        <h3>🛏️ إضافة غرفة</h3>
+
+        <br />
+
+        <label>اسم الغرفة</label>
+        <input type="text" id="roomNameInput" placeholder="مثال: غرفة ولاد A" />
+
+        <label>عدد الأفراد</label>
+        <input type="number" id="roomCapacityInput" placeholder="مثال: 8" />
+
+        <label>نوع الغرفة</label>
+        <select id="roomGenderInput">
+          <option value="male">👦 ولاد</option>
+          <option value="female">👧 بنات</option>
+        </select>
+
+        <button class="btn-gold" onclick="addRoom()">➕ إضافة الغرفة</button>
+
+        <br /><br />
+
+        <div id="roomListContainer"></div>
+      </div>
+
+      <!-- Actions -->
+
+      <div class="card">
+        <h3>⚙️ عمليات أخرى</h3>
+
+        <br />
+
+        <button class="btn-green" onclick="exportExcel()">
+          📥 تصدير Excel
+        </button>
+
+        <br /><br />
+
+        <button class="btn-red" onclick="resetSystem()">
+          🗑️ حذف جميع البيانات
+        </button>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <script src="js/main.js"></script>
+    <script type="module" src="js/admin.js"></script>
+  </body>
+</html>

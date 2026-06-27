@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>حجز الأوتوبيسات</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap"
+      rel="stylesheet" />
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <!-- Header -->
+      <div class="logo-box">
+        <img src="assets/logo.png" alt="Conference Logo" />
+
+        <h3>مؤتمر صيف ٢٠٢٦</h3>
+      </div>
+      <div class="card">
+        <div class="card-title">
+          <button onclick="goBack()" style="width: 45px">⬅</button>
+
+          <h2>حجز الأوتوبيسات</h2>
+        </div>
+      </div>
+
+      <!-- سيتم إنشاء الأوتوبيسات هنا -->
+
+      <div id="busContainer"></div>
+    </div>
+
+    <script src="js/main.js"></script>
+
+    <script type="module" src="js/buses.js"></script>
+  </body>
+</html>
